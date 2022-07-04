@@ -59,7 +59,6 @@
 .content{
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
     margin: 2.5rem 3rem;
 }
 .content h2{
