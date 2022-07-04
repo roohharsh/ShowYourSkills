@@ -1,5 +1,5 @@
 <%-include("header")-%>
-    <div class="right"><h1><marquee behavior="alternate" direction="">Alfaaz Club Welcomes You</marquee></h1>
+    <div class="right "><h1 class="homeHeader"><marquee scrollamount="20" behavior="alternate" direction="">Alfaaz Club Welcomes You</marquee></h1>
         <div class="content">
             <h3>About Arturo Club</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolorem laboriosam cum debitis molestias autem doloribus dolore veniam ad odio. Fugit, autem dolorum? Blanditiis modi at dolorem amet numquam consequuntur.
@@ -8,12 +8,13 @@
                 <div class="post">
                     <div class="heading">
                         <h2><%=post.title%></h2>
-                        <h3><span>#</span><%=post.time%></h3>
+                        <span><%=post.time%></span>
                     </div>
                     <p><%=post.item%></p>
-                    <span><%=post.name%></span>
+                    <div class="name">~ <%=post.name%></div>
                 </div>
             <%})%>
+            <button class="btn">Compose Your Content</button>
         </div>
     </div>
 

@@ -6,16 +6,17 @@
 .container{
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .left{
     width: 23vw;
-    border: 2px solid red;
-    height: 98vh;
+    /* border: 2px solid red; */
+    height: 94vh;
     text-align: center;
     font-size: 2.3rem;
     background-color: #000000ad;
+    box-shadow: 0 2px 4px rgb(57 52 59 / 71%), 0 8px 16px rgb(57 52 59 / 71%);
 }
 .left .logo img{
     border: none;
@@ -43,11 +44,11 @@
 
 .right{
     width: 77vw;
-    border: 2px solid yellow;   
+    /* border: 2px solid yellow;    */
 }
-.right h1{
+.right .homeHeader{
     display: flex;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     align-items: center;
     justify-content: center;
     /* margin: 0.5rem 0.5rem; */
@@ -55,6 +56,8 @@
     font-size: 3rem;
     background-color: wheat;
     color: rgb(4, 116, 116);
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
 }
 .content{
     display: flex;
@@ -67,4 +70,53 @@
 .content p{
     font-size: 1.2rem;
     margin-top: 0.5rem;
+}
+
+
+/*  Alfaaz Club   */
+.post{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(147, 170, 176);
+    margin-top: 20px;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 10px;
+}
+.post .name{
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    padding-right: 0;
+}
+.heading{
+    display: flex;
+    width: 90%;
+}
+.heading span{
+    margin-top: 29px;
+    margin-left: 10px;
+}
+.btn{
+    width: 20%;
+    height: 45px;
+    margin-top: 26px;
+    margin-bottom: -14px;
+    border-radius: 24px;
+    background-color: rgb(184, 192, 123);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+/* footer section  */
+footer{
+    background: #111;
+    padding: 12px 23px;
+    color: #fff;
+    text-align: center;
 }
