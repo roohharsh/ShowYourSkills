@@ -12,11 +12,12 @@
 .left{
     width: 23vw;
     /* border: 2px solid red; */
-    height: 94vh;
+    height: 93vh;
     text-align: center;
     font-size: 2.3rem;
     background-color: #000000ad;
     box-shadow: 0 2px 4px rgb(57 52 59 / 71%), 0 8px 16px rgb(57 52 59 / 71%);
+    margin-bottom: 10px;
 }
 .left .logo img{
     border: none;
@@ -48,10 +49,8 @@
 }
 .right .homeHeader{
     display: flex;
-    /* border: 2px solid yellow; */
     align-items: center;
     justify-content: center;
-    /* margin: 0.5rem 0.5rem; */
     padding: 0.5rem 0.5rem;
     font-size: 3rem;
     background-color: wheat;
@@ -63,6 +62,8 @@
     display: flex;
     flex-direction: column;
     margin: 2.5rem 3rem;
+    max-height: 31rem;
+    overflow-y: scroll;
 }
 .content h2{
     font-size: 3rem;
@@ -102,14 +103,57 @@
     margin-left: 10px;
 }
 .btn{
-    width: 20%;
-    height: 45px;
-    margin-top: 26px;
-    margin-bottom: -14px;
     border-radius: 24px;
     background-color: rgb(184, 192, 123);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
+    margin-left: 3rem;
+    padding: 11px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* alfaazUpload Section  */
+.upload{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+.container1{
+    margin: 4rem auto;
+}
+.HEADER{
+    font-size: 3.5rem;
+    background-image: -webkit-linear-gradient(60deg,#ff00009c 50%,wheat 50%);
+}
+.container1 form{
+    display: flex;
+    flex-direction: column;
+}
+.container1 .input{
+    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+    width: 20rem;
+    height: 1.8rem;
+    border-radius: 0.5rem;
+    padding: 2px 12px;
+    border: 2px solid black;
+}
+.container1 #poem{
+    height: 7rem;
+    width: 30rem;
+}
+.upload button{
+    width: 45%;
+    height: 46px;
+    margin-bottom: -23px;
+    border-radius: 24px;
+    background-color: rgb(184, 192, 123);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 
