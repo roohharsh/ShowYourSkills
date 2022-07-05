@@ -88,6 +88,13 @@
     border-top-right-radius: 1rem;
     padding: 10px;
 }
+.post p{
+    display: flex;
+    text-align: left;
+    width: 85%;
+    border: 2px solid black;
+    margin-left: 1.1rem;
+}
 .post .name{
     width: 90%;
     display: flex;

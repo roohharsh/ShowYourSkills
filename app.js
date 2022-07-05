@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/AlfaazDB",{useNewUrlParser:true});
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get("/",function(req,res){
@@ -84,6 +85,7 @@ const item3 = new alfaaz({
 const defaultAlfaaz = [item1,item2,item3];
 app.get("/alfaaz",function(req,res){
     alfaaz.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
         if(foundItems.length===0)
         {
             alfaaz.insertMany(defaultAlfaaz,function(err){
@@ -105,6 +107,23 @@ app.get("/alfaaz",function(req,res){
 
 app.get("/alfaaz/alfaazUpload",function(req,res){
     res.render("alfaazUpload");
+})
+
+app.post("/alfaaz/alfaazUpload",function(req,res){
+    let name = req.body.yourName;
+    let Title = req.body.title;
+    let poem = req.body.item;
+    let today = new Date();
+     let day = today.toLocaleDateString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+
+    const item = new alfaaz({
+        name: name,
+        title: Title,
+        item: poem,
+        time: day
+    });
+    item.save();
+    res.redirect("/alfaaz");
 })
 
 //Gym Starts
