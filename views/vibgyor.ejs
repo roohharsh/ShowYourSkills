@@ -7,8 +7,8 @@
             <%posts.forEach(function(post){%>
                 <div class="post">
                     <div class="heading">
-                        <div class="name">~ <%=post.name%></div>
-                        <span><%=post.time%></span>
+                        <div class="_name">~ <%=post.name%></div>
+                        <div class="_time">#<%=post.time%></div>
                     </div>
                     <div class="image">
                         <img src="/vibgyorUploads/<%=post.image%>.png" alt="." style: height="300 rem">
@@ -16,7 +16,7 @@
                     
                 </div>
             <%})%>
-            <button class="btn">Compose Your Content</button>
         </div>
+        <a href="alfaaz/alfaazUpload" class="btn">Upload Your Content</a>
     </div>
 <%-include("footer")-%>
