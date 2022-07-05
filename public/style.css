@@ -43,6 +43,32 @@
     margin-right: 1rem;
 }
 
+.others{
+    display: flex;
+    margin: 35px 35px;
+    justify-content: space-between;
+}
+.others a{
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 3px 6px;
+}
+.others a:hover{
+    transform:scale(1.2,1.2);
+    -webkit-transform:scale(1.2,1.2);
+    -moz-transform:scale(1.2,1.2);
+    color: white;
+}
+.about{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.feedback{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 .right{
     width: 77vw;
     /* border: 2px solid yellow;    */
@@ -92,7 +118,7 @@
     display: flex;
     text-align: left;
     width: 85%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-left: 1.1rem;
 }
 .post .name{
@@ -155,6 +181,7 @@
     width: 45%;
     height: 46px;
     margin-bottom: -23px;
+    cursor: pointer;
     border-radius: 24px;
     background-color: rgb(184, 192, 123);
     font-size: 1.1rem;
@@ -248,6 +275,23 @@
 .arturoUpload button:hover{
     background-color: #ff00009c;
     color: white;
+}
+
+/* dcypher alankar & alpha clubs section  */
+.video{
+    width: 77vw;
+    /* border: 2px solid yellow;    */
+}
+.video .__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    font-size: 3rem;
+    background-color: wheat;
+    color: rgb(4, 116, 116);
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
 }
 
 /* footer section  */
