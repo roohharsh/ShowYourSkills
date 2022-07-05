@@ -62,6 +62,9 @@ app.get("/alfaaz",function(req,res){
     })
 })
 
+app.get("/alfaaz/alfaazUpload",function(req,res){
+    res.render("alfaazUpload");
+})
 app.listen(3000,function(){
     console.log("Server started on port 3000");
 })
