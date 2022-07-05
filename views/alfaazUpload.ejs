@@ -1,14 +1,17 @@
 <%-include("header")-%>
-    <div class="container  container1">
+    <div class="upload">
+        <h1 class="HEADER">Upload Your Content</h1>
+        <div class="container1"> 
         <form action="/compose" method="post" class="Alfaaz">
-            <h3>Enter Your Name:</h3>
-            <input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required>
-            <h3>Enter Title:</h3>
-            <input type="text" name="title" id="title" placeholder="Enter Title" required>
-            <h3>Type Your Content Below:</h3>
-            <textarea name="item" id="poem" cols="50" rows="10" placeholder="Enter a relevant content......"></textarea>
+                <h3>Enter Your Name:</h3>
+                <input type="text" name="yourName" id="name" class="input" placeholder="Enter Your full Name" required>
+                <h3>Enter Title:</h3>
+                <input type="text" name="title" id="title" class="input" placeholder="Enter Title" required>
+                <h3>Type Your Content Below:</h3>
+                <textarea name="item" id="poem" class="input" cols="50" rows="10" placeholder="Enter a relevant content......"></textarea>
             <button type="submit" name="myContent" >Compose Your Content</button>
         </form>
+        </div>
     </div>
         
 <%-include("footer")-%>
