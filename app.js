@@ -12,9 +12,48 @@ app.set('view engine', 'ejs');
 app.get("/",function(req,res){
     res.render("index");
 })
-app.get("/arturo",function(req,res){
-    res.render("arturo");
+
+// Arturo starts
+const arturoSchema = {
+    name: String,
+    image: String,
+    time: String
+};
+const arturo = mongoose.model("arturos",arturoSchema);
+const arturoItem1= new arturo({
+    name:"harsh",
+    image:"ss1",
+    time: "22h"
 })
+const arturoItem2= new arturo({
+    name:"saurabh",
+    image:"ss2",
+    time: "22h"
+})
+const defaultArturo = [arturoItem1, arturoItem2];
+app.get("/arturo",function(req,res){
+    arturo.find({}, function(err,foundItems){
+        if(foundItems.length===0)
+        {
+            arturo.insertMany(defaultArturo,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/arturo");
+        }
+        else
+        res.render("arturo", { posts:foundItems});
+    })
+})
+
+
+//ALFAAZ STARTS
 const alfaazSchema= {
     name: String,
     title: String,
@@ -65,6 +104,86 @@ app.get("/alfaaz",function(req,res){
 app.get("/alfaaz/alfaazUpload",function(req,res){
     res.render("alfaazUpload");
 })
+
+//Gym Starts
+const gymSchema = {
+    name: String,
+    image: String,
+    time: String
+};
+const gym = mongoose.model("gyms",gymSchema);
+const gymItem1= new gym({
+    name:"harsh",
+    image:"ss1",
+    time: "22h"
+})
+const gymItem2= new gym({
+    name:"saurabh",
+    image:"ss2",
+    time: "22h"
+})
+const defaultGym = [gymItem1, gymItem2];
+app.get("/gymnasium",function(req,res){
+    gym.find({}, function(err,foundItems){
+        if(foundItems.length===0)
+        {
+            gym.insertMany(defaultGym,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/gymnasium");
+        }
+        else
+        res.render("gymnasium", { posts:foundItems});
+    })
+})
+
+//starts vibgyor
+const vibgyorSchema = {
+    name: String,
+    image: String,
+    time: String
+};
+const vibgyor = mongoose.model("vibgyors",vibgyorSchema);
+const vibgyorItem1= new gym({
+    name:"harsh",
+    image:"ss1",
+    time: "22h"
+})
+const vibgyorItem2= new gym({
+    name:"saurabh",
+    image:"ss2",
+    time: "22h"
+})
+const defaultvibgyor = [vibgyorItem1, vibgyorItem2];
+app.get("/vibgyor",function(req,res){
+    vibgyor.find({}, function(err,foundItems){
+        if(foundItems.length===0)
+        {
+            vibgyor.insertMany(defaultvibgyor,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/vibgyor");
+        }
+        else
+        res.render("vibgyor", { posts:foundItems});
+    })
+})
+
+
 app.listen(3000,function(){
     console.log("Server started on port 3000");
 })
