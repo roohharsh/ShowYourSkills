@@ -51,7 +51,9 @@ app.get("/arturo",function(req,res){
         res.render("arturo", { posts:foundItems});
     })
 })
-
+app.get("/arturo/arturoUpload",function(req,res){
+    res.render("arturoUpload");
+})
 
 //ALFAAZ STARTS
 const alfaazSchema= {
@@ -143,6 +145,9 @@ app.get("/gymnasium",function(req,res){
         res.render("gymnasium", { posts:foundItems});
     })
 })
+app.get("/gymnasium/gymnasiumUpload",function(req,res){
+    res.render("gymnasiumUpload");
+})
 
 //starts vibgyor
 const vibgyorSchema = {
@@ -181,6 +186,9 @@ app.get("/vibgyor",function(req,res){
         else
         res.render("vibgyor", { posts:foundItems});
     })
+})
+app.get("/vibgyor/vibgyorUpload",function(req,res){
+    res.render("vibgyorUpload");
 })
 
 
