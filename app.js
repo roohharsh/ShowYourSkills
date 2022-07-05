@@ -210,6 +210,20 @@ app.get("/vibgyor/vibgyorUpload",function(req,res){
     res.render("vibgyorUpload");
 })
 
+// dcypher 
+app.get("/dcypher", function(req,res){
+    res.render("dcypher");
+})
+
+// alankar 
+app.get("/alankar", function(req,res){
+    res.render("alankar");
+})
+
+// alpha 
+app.get("/alpha", function(req,res){
+    res.render("alpha");
+})
 
 app.listen(3000,function(){
     console.log("Server started on port 3000");
