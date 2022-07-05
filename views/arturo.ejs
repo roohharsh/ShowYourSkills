@@ -1,5 +1,5 @@
 <%-include("header")-%>
-    <div class="right "><h1 class="homeHeader"><marquee scrollamount="20" behavior="alternate" direction="">Arturo Club Welcomes You</marquee></h1>
+    <div class="right"><h1 class="homeHeader"><marquee scrollamount="20" behavior="alternate" direction="">Arturo Club Welcomes You</marquee></h1>
         <div class="content">
             <h3>About Arturo Club</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolorem laboriosam cum debitis molestias autem doloribus dolore veniam ad odio. Fugit, autem dolorum? Blanditiis modi at dolorem amet numquam consequuntur.
@@ -7,17 +7,16 @@
             <%posts.forEach(function(post){%>
                 <div class="post">
                     <div class="heading">
-                        <div class="name">~ <%=post.name%></div>
-                        <span><%=post.time%></span>
+                        <div class="_name">~ <%=post.name%></div>
+                        <div class="_time">#<%=post.time%></div>
                     </div>
                     <div class="image">
                         <img src="/arturoUploads/<%=post.image%>.png" alt="." style: height="300 rem">
-                    </div>
-                    
+                    </div> 
                 </div>
             <%})%>
-            <button class="btn">Compose Your Content</button>
         </div>
+        <a href="alfaaz/alfaazUpload" class="btn">Upload Your Content</a>
     </div>
 
 <%-include("footer")-%>
