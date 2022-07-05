@@ -1,0 +1,13 @@
+<%-include("header")-%>
+    <div class="arturoUpload">
+        <h1>Submit Your Content</h1>
+        <form action="/gymnasiumUpload" method="post" class="_Arturo">
+            <h3>Enter Your Name:</h3>
+            <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
+            <div class="fileUpload">Upload Your Content(File should be only in .png form): </div>
+            <input type="file" name="gymImage" id="arturoImage" accept="image/png, image/gif, image/jpeg"  required>
+            <button type="submit" name="gymSubmit" >Upload Content</button>
+        </form>
+    </div>
+        
+<%-include("footer")-%>
