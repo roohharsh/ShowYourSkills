@@ -1,3 +1,23 @@
 <%-include("header")-%>
-    <div class="right">Arturo Club Welcomes You</div>
+    <div class="right "><h1 class="homeHeader"><marquee scrollamount="20" behavior="alternate" direction="">Arturo Club Welcomes You</marquee></h1>
+        <div class="content">
+            <h3>About Arturo Club</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolorem laboriosam cum debitis molestias autem doloribus dolore veniam ad odio. Fugit, autem dolorum? Blanditiis modi at dolorem amet numquam consequuntur.
+            </p>
+            <%posts.forEach(function(post){%>
+                <div class="post">
+                    <div class="heading">
+                        <div class="name">~ <%=post.name%></div>
+                        <span><%=post.time%></span>
+                    </div>
+                    <div class="image">
+                        <img src="/arturoUploads/<%=post.image%>.png" alt="." style: height="300 rem">
+                    </div>
+                    
+                </div>
+            <%})%>
+            <button class="btn">Compose Your Content</button>
+        </div>
+    </div>
+
 <%-include("footer")-%>
