@@ -311,8 +311,8 @@
     flex-direction: column;
 }
 .Feedback .input{
-    margin-bottom: 2rem;
-    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
     width: 20rem;
     height: 1.8rem;
     border-radius: 0.5rem;
@@ -324,7 +324,7 @@
     width: 30rem;
 }
 .Feedback button{
-    width: 45%;
+    width: 35%;
     height: 46px;
     margin-bottom: -23px;
     cursor: pointer;
