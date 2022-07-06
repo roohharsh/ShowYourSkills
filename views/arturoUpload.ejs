@@ -1,7 +1,7 @@
 <%-include("header")-%>
     <div class="arturoUpload">
         <h1>Submit Your Content</h1>
-        <form action="/arturo/arturoUpload" method="post" class="_Arturo">
+        <form action="/arturo/arturoUpload" method="post" class="_Arturo" enctype="multipart/form-data">
             <h3>Enter Your Name:</h3>
             <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
             <div class="fileUpload">Upload Your Content(File should be only in .png form): </div>
