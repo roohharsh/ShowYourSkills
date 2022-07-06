@@ -294,6 +294,52 @@
     border-bottom-right-radius: 0.7rem;
 }
 
+
+/* feedback section  */
+.Feedback{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+.feed{
+    font-size: 3rem;
+    background-image: -webkit-linear-gradient(60deg,#ff00009c 50%,wheat 50%);
+    margin: 3rem 0;
+}
+.Feedback form{
+    display: flex;
+    flex-direction: column;
+}
+.Feedback .input{
+    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+    width: 20rem;
+    height: 1.8rem;
+    border-radius: 0.5rem;
+    padding: 2px 12px;
+    border: 2px solid black;
+}
+.Feedback #poem{
+    height: 7rem;
+    width: 30rem;
+}
+.Feedback button{
+    width: 45%;
+    height: 46px;
+    margin-bottom: -23px;
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: rgb(184, 192, 123);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* about section  */
+
+
 /* footer section  */
 footer{
     background: #111;
