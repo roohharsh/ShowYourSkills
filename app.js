@@ -6,7 +6,8 @@ const app = express();
 const _ = require("lodash");
 const alert = require('alert');
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/AlfaazDB",{useNewUrlParser:true});
+const AlfaazDB = "mongodb+srv://saurabh_8230:project123@cluster0.zbqxu.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(AlfaazDB,{useNewUrlParser:true});
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -306,11 +307,36 @@ app.get("/about", function(req,res){
 })
 
 // feedback
+const feedbackSchema = {
+    firstName: String,
+    lastName: String,
+    phone: Number,
+    email: String,
+    item: String
+};
+const feedback = mongoose.model("feedbacks",feedbackSchema);
 app.get("/feedback", function(req,res){
     res.render("feedback");
+})
+app.post("/feedback",function(req,res){
+    const firstName = req.body.yourFirstName;
+    const lastName = req.body.yourLastName;
+    const phone = req.body.Phone;
+    const email = req.body.email;
+    const item = req.body.item;
+    const fb = new feedback({
+        firstName: firstName,
+        lastName:lastName,
+        phone: phone,
+        email: email,
+        item : item,
+    });
+    fb.save();
+    alert("Thanks! for your valuable feedback.")
+    res.redirect("/");
+
 })
 
 app.listen(3000,function(){
     console.log("Server started on port 3000");
 })
-
