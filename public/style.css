@@ -338,6 +338,73 @@
 
 
 /* about section  */
+._about{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+._about h2{
+    font-size:  3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(101, 4, 4, 0.2);
+    transition: 0.3s;
+    background-image: -webkit-linear-gradient(60deg,#8a68689c 50%,wheat 50%);
+    border-radius: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.cards
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(179, 149, 149));
+    border-radius:20px ;
+    width: 45rem;
+    padding: 0.5rem;
+    margin: 0.5rem;   
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 6rem;
+    height: 8rem;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 2.5rem;
+    
+}
+.college{
+    font-size: 0.75rem;
+    
+}
+
+.about_xyz{
+    font-size: 1rem;
+    margin-top: 0.7rem ;
+}
+.about_xyz strong{
+    font-size: 1.2rem;
+    
+}
+
 
 
 /* footer section  */
