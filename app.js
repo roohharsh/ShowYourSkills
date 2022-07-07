@@ -6,7 +6,8 @@ const app = express();
 const _ = require("lodash");
 const alert = require('alert');
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/AlfaazDB",{useNewUrlParser:true});
+const AlfaazDB = "mongodb+srv://saurabh_8230:project123@cluster0.zbqxu.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(AlfaazDB,{useNewUrlParser:true});
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
