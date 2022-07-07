@@ -367,9 +367,9 @@
     flex-direction: row;
     background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(179, 149, 149));
     border-radius:20px ;
-    width: 45rem;
+    width: 75%;
     padding: 0.5rem;
-    margin: 0.5rem;   
+    margin: 0.5rem auto;   
 }
 .img{
     display: flex;
