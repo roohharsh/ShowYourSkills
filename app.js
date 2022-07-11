@@ -4,7 +4,6 @@ const multer = require('multer');
 const path = require('path');
 const app = express();
 const _ = require("lodash");
-const alert = require('alert');
 const mongoose = require("mongoose");
 const AlfaazDB = "mongodb+srv://saurabh_8230:project123@cluster0.zbqxu.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(AlfaazDB,{useNewUrlParser:true});
@@ -77,7 +76,6 @@ app.post("/arturo/arturoUpload" ,upload,function(req,res,next){
         time: day
     });
     item.save();
-    alert("Successfully uploaded");
     res.redirect("/arturo");
 });
 
@@ -156,7 +154,6 @@ app.post("/alfaaz/alfaazUpload",function(req,res){
         time: day
     });
     item.save();
-    alert("Successfully uploaded");
     res.redirect("/alfaaz");
 })
 
@@ -175,6 +172,7 @@ const gymItem1= new gym({
 const defaultGym = [gymItem1];
 app.get("/gymnasium",function(req,res){
     gym.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
         if(foundItems.length===0)
         {
             gym.insertMany(defaultGym,function(err){
@@ -218,7 +216,6 @@ app.post("/gymnasium/gymnasiumUpload" ,upload,function(req,res,next){
         time: day
     });
     item.save();
-    alert("Successfully uploaded");
     res.redirect("/gymnasium");
 });
 
@@ -237,6 +234,7 @@ const vibgyorItem1= new vibgyor({
 const defaultvibgyor = [vibgyorItem1];
 app.get("/vibgyor",function(req,res){
     vibgyor.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
         if(foundItems.length===0)
         {
             vibgyor.insertMany(defaultvibgyor,function(err){
@@ -280,7 +278,6 @@ app.post("/vibgyor/vibgyorUpload" ,upload,function(req,res,next){
         time: day
     });
     item.save();
-    alert("Successfully uploaded");
     res.redirect("/vibgyor");
 });
 
@@ -331,7 +328,6 @@ app.post("/feedback",function(req,res){
         item : item,
     });
     fb.save();
-    alert("Thanks! for your valuable feedback.")
     res.redirect("/");
 
 })
