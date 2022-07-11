@@ -77,8 +77,7 @@ app.post("/arturo/arturoUpload" ,upload,function(req,res,next){
         time: day
     });
     item.save();
-    // alert("Successfully uploaded");
-    message.message();
+    alert("Successfully uploaded");
     res.redirect("/arturo");
 });
 

@@ -92,7 +92,8 @@
     overflow-y: scroll;
 }
 .content h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 .content p{
     font-size: 1.2rem;
@@ -102,7 +103,7 @@
 
 /*  Alfaaz Club   */
 .post{
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,25 +115,27 @@
     border-top-right-radius: 1rem;
     padding: 10px;
 }
-.post p{
+.post pre{
     display: flex;
     text-align: left;
     width: 85%;
     /* border: 2px solid black; */
-    margin-left: 1.1rem;
+    margin-left: 0px;
+    font-size: 1.2rem;
 }
 .post .name{
     width: 90%;
     display: flex;
     justify-content: right;
     padding-right: 0;
+    font-size: 1.5rem;
 }
 .heading{
     display: flex;
     width: 90%;
 }
 .heading span{
-    margin-top: 29px;
+    margin-top: 24px;
     margin-left: 10px;
 }
 .btn{
@@ -192,7 +195,7 @@
 
 /* arturo, vibgyor & gymnasium section  */
 .post{
-    width: 50%;
+    width: 65%;
     margin: 15px auto;
     border-radius: 1rem;
 }
@@ -220,7 +223,6 @@
 }
 
 /* arturo upload section */
-
 .arturoUpload{
     display: flex;
     flex-direction: column;
@@ -278,20 +280,18 @@
 }
 
 /* dcypher alankar & alpha clubs section  */
-.video{
-    width: 77vw;
-    /* border: 2px solid yellow;    */
-}
-.video .__text{
+._body{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    min-height: 70vh;
     justify-content: center;
-    padding: 0.5rem 0.5rem;
-    font-size: 3rem;
-    background-color: wheat;
-    color: rgb(4, 116, 116);
-    border-bottom-left-radius: 0.7rem;
-    border-bottom-right-radius: 0.7rem;
+    /* background-color: black; */
+}
+.__working{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
 }
 
 
@@ -322,6 +322,7 @@
 .Feedback #poem{
     height: 7rem;
     width: 30rem;
+    font-size: 1rem;
 }
 .Feedback button{
     width: 35%;
@@ -351,7 +352,7 @@
     background-image: -webkit-linear-gradient(60deg,#8a68689c 50%,wheat 50%);
     border-radius: 20px;
     width: 50%;
-    margin: auto;
+    margin: 2rem auto;
 }
 
 .cards
@@ -367,33 +368,35 @@
     flex-direction: row;
     background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(179, 149, 149));
     border-radius:20px ;
-    width: 75%;
+    width: 45rem;
     padding: 0.5rem;
-    margin: 0.5rem auto;   
+    margin: 0.5rem;   
+}
+.card:hover{
+    transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
 }
 .img{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
+}
+.img a{
+    color: blue;
 }
 
 .avatar {
     vertical-align: middle;
     width: 6rem;
-    height: 8rem;
+    height: 7rem;
     border: 2px solid black;
     border-radius: 50%;
 }
 
-.name{
-    font-size: 2.5rem;
-    
-}
 .college{
     font-size: 0.75rem;
-    
 }
 
 .about_xyz{
@@ -401,10 +404,8 @@
     margin-top: 0.7rem ;
 }
 .about_xyz strong{
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem; 
 }
-
 
 
 /* footer section  */
