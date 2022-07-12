@@ -1,3 +1,14 @@
+/* preloading animation  */
+#preloader{
+    background: url("./images/preloader.gif") no-repeat center center;
+    background-color: black;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 /* about page  */
 .__name{
     font-size: 2.5rem;

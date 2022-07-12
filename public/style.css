@@ -2,7 +2,9 @@
     margin: 0px;
     padding: 0;
 }
-
+body iframe{
+    display: none;
+}
 .container{
     display: flex;
     flex-direction: row;
@@ -12,26 +14,23 @@
 .left{
     width: 23vw;
     /* border: 2px solid red; */
-    height: 93vh;
+    height: 100vh;
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     background-color: #000000ad;
     box-shadow: 0 2px 4px rgb(57 52 59 / 71%), 0 8px 16px rgb(57 52 59 / 71%);
-    margin-bottom: 10px;
 }
 .left .logo img{
     border: none;
-    width: 130px;
-    height: 100px;
-    margin-top: 15px;
+    width: 75%;
+    filter: invert(1);
 }
 .navbar{
     text-align: left;
-    margin-left: 5rem;
-    margin-right: 1rem;
+    margin-left: 2.5rem;
 }
 .navbar ul li{
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     list-style: none;
 }
 .navbar ul li a{
@@ -89,9 +88,12 @@
 .content{
     display: flex;
     flex-direction: column;
-    margin: 2.5rem 3rem;
-    max-height: 31rem;
-    overflow-y: scroll;
+    margin: 0 3rem;
+    max-height: 38rem;
+    overflow-y: auto;
+}
+.content::-webkit-scrollbar{
+    display: none;
 }
 .content h2{
     font-size: 2.5rem;
@@ -113,14 +115,15 @@
     scrollbar-width: none;
     margin-left: 3.1rem;
     margin-right: 3.1rem;
+    margin-top: 3rem;
 }
 .slides > img{
     scroll-snap-align: start;
 }
 .slides img{
     border-radius: 1rem;
-    width: 410px;
-    height: 300px;
+    width: 510px;
+    height: 400px;
 }
 .slides::-webkit-scrollbar{
     display: none;
@@ -139,7 +142,7 @@
     margin-top: 20px;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    padding: 10px;
+    /* padding: 10px; */
 }
 .post pre{
     display: flex;
@@ -155,6 +158,7 @@
     justify-content: right;
     padding-right: 0;
     font-size: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 .heading{
     display: flex;
@@ -173,6 +177,10 @@
     padding: 11px;
     text-decoration: none;
     color: black;
+}
+.___btn{
+    margin-top: 1rem;
+    /* border: 2px solid red; */
 }
 
 
@@ -221,7 +229,7 @@
 
 /* arturo, vibgyor & gymnasium section  */
 .post{
-    width: 65%;
+    width: 55%;
     margin: 15px auto;
     border-radius: 1rem;
 }
@@ -237,7 +245,7 @@
     margin-top: 14px;
 }
 .post .image{
-    width: 84%;
+    width: 100%;
     border-radius: 2rem;
     margin-top: 7px;
     margin-bottom: 10px;
