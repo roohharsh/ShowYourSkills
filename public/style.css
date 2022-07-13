@@ -1,6 +1,10 @@
 *{
     margin: 0px;
     padding: 0;
+    
+}
+HTML{
+    background: #d2e7f3bf;
 }
 body iframe{
     display: none;
@@ -17,17 +21,16 @@ body iframe{
     height: 100vh;
     text-align: center;
     font-size: 2rem;
-    background-color: #000000ad;
+    /* background-color: white; */
     box-shadow: 0 2px 4px rgb(57 52 59 / 71%), 0 8px 16px rgb(57 52 59 / 71%);
 }
 .left .logo img{
     border: none;
     width: 75%;
-    filter: invert(1);
 }
 .navbar{
     text-align: left;
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
 }
 .navbar ul li{
     margin-bottom: 1.2rem;
@@ -35,13 +38,24 @@ body iframe{
 }
 .navbar ul li a{
     text-decoration: none;
-    color: white;
 }
 .navbar ul li i{
-    filter: invert(1);
     margin-right: 1rem;
 }
-
+.navbar ul li:hover{
+    transform:scale(1.05,1.05);
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    /* background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);  */
+    background-color: #0b5981;
+    font-weight:bold;
+    color: white;
+    border: 2px solid black;
+    width: 80%;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    
+}
 .others{
     display: flex;
     margin: 35px 35px;
@@ -138,10 +152,12 @@ body iframe{
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: rgb(147, 170, 176);
+    background-color: rgb(31 165 229 / 38%);
     margin-top: 20px;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
     /* padding: 10px; */
 }
 .post pre{
