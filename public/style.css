@@ -53,6 +53,7 @@ body iframe{
 }
 .navbar ul li i{
     margin-right: 1rem;
+    color: #145a92;
 }
 .navbar ul li:hover{
     font-weight:bold;
