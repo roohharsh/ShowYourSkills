@@ -1,0 +1,13 @@
+<%-include("header")-%>
+<div class="arturoUpload">
+    <h1 class="HEADER">Submit Your Content</h1>
+    <form action="/dcypher/dcypherUpload" method="post" class="_Arturo" enctype="multipart/form-data">
+        <h3>Enter Your Name:</h3>
+        <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
+        <div class="fileUpload">Upload Your Content(File should be in .mp4 form): </div>
+        <input type="file" name="dcypherVideo" id="arturoImage" accept="video/mp4" required>
+        <button type="submit" name="dcypherSubmit" class="button" ><span class="button-inner">Upload Content <i class="fa-solid fa-arrow-up-from-bracket"></i></span></button>
+    </form>
+</div>
+        
+<%-include("footer")-%>

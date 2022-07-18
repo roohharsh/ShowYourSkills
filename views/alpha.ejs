@@ -1,14 +1,32 @@
 <%-include("header")-%>
-<div class="right">
-    <h1 class="homeHeader">Alpha Club Welcomes You</h1>
-<div class="_body">
-    <div class="__working">We are Working on it.</div>
-    <div class="wave">
-        <span></span><span></span><span></span><span></span>
-        <span class="s5"></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
+    <div class="right">
+        <h1 class="homeHeader">Alpha Club Welcomes You</h1>
+        <div class="content">
+            <h3>About Alpha Club</h3>
+            <p>
+                Are you photoholic?
+                Let your network know your talent by uploading the photo clicked by you whether of our beautiful campus or the nature or your creativity.
+                The Arturo Club of IIT Ropar invites entries in this regard.
+                A photo can express more than a million word paragraph.
+                Enter your entries by clicking the button below and make your network stronger and find your friends with similar interests.
+            </p>
+            <%posts.forEach(function(post){%>
+                <div class="post">
+                    <div class="heading">
+                        <div class="_name"><%=post.name%></div>
+                        <div class="_time">#<%=post.time%></div>
+                    </div>
+                    <div class="video">
+                        <video width="99%" id="cspd_video" controls autoplay muted>
+                            <source src="/alphaUploads/<%=post.video%>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+        <div class="_btn">
+            <a href="/alpha/alphaUpload"  class="btn">Upload Your Content <i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
     </div>
-</div>
-</div>
 <%-include("footer")-%>

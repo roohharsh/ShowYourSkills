@@ -1,0 +1,34 @@
+<%-include("header")-%>
+    <div class="right">
+        <h1 class="homeHeader">Gaming Club Welcomes You</h1>
+        <div class="content">
+            <h3>About Gaming Club</h3>
+            <p>
+                Let the thrill drive through the veins
+                Load your guns, Aim your targets and Shoot like never before
+                We know that games may be addictive but we aren't school kids we know how to handle it. College stress
+                can be lessen more with the games. Join the Gaming Club and let other people know your shooting and
+                sprinting skills.
+                Give your Chicken Dinner-Booyah entries here and flex among your peers-
+            </p>
+            <%posts.forEach(function(post){%>
+                <div class="post">
+                    <div class="heading">
+                        <div class="_name"><%=post.name%></div>
+                        <div class="_time">#<%=post.time%></div>
+                    </div>
+                    <div class="video">
+                        <video width="99%" id="cspd_video" controls autoplay muted>
+                            <source src="/gamingUploads/<%=post.video%>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+        <div class="_btn">
+            <a href="/gaming/gamingUpload" class="btn">Upload Your Content <i
+                    class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
+    </div>
+    <%-include("footer")-%>

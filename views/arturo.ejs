@@ -7,7 +7,6 @@
                 Let your network know your talent by uploading the photo clicked by you whether of our beautiful campus or the nature or your creativity.
                 The Arturo Club of IIT Ropar invites entries in this regard.
                 A photo can express more than a million word paragraph.
-                Enter your entries with the below form and make your network stronger and find your friends with similar interests.
             </p>
             <%posts.forEach(function(post){%>
                 <div class="post">
@@ -16,12 +15,14 @@
                         <div class="_time">#<%=post.time%></div>
                     </div>
                     <div class="image">
-                        <img src="/arturoUploads/<%=post.image%>" alt="." style: height="300 rem">
+                        <img src="/arturoUploads/<%=post.image%>" alt=".">
                     </div> 
                 </div>
             <%})%>
         </div>
-        <div class="___btn"><a href="/arturo/arturoUpload" class="btn">Upload Your Content</a></div>
+        <div class="_btn">
+            <a href="/arturo/arturoUpload"  class="btn">Upload Your Content <i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>  
+        
     </div>
-
 <%-include("footer")-%>

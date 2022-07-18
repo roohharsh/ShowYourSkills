@@ -1,8 +1,8 @@
 /* preloading animation  */
 #preloader{
     background: url("./images/preloader.gif") no-repeat center center;
-    background-color: black;
-    background-size: 20%;
+    background-color: #1a6aaf;
+    background-size: 40%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -10,25 +10,22 @@
 }
 
 /* about page  */
-.__name{
+.info h1{
     font-size: 2.5rem;
     overflow: hidden;
-    white-space: nowrap;
-    animation: 
-    typing 3.5s steps(1000000, end),
-    blink-caret .75s step-end infinite;
+    /* white-space: nowrap; */
+    display: inline-block;
+    color:#1a6aaf;
 }
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
+.info h1:after{
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 25px;
 }
 
 
-/* dcypher, alankar & alpha  */
+/* dcypher, alankar, alpha & gaming upload section  */
 .wave{
     height: 306px;
     width: 306px;
@@ -114,22 +111,6 @@
 .wave span:nth-child(16){
     inset: 150px;
     animation-delay: 0.1s;
-}
-.__working{
-    font-size: 2.5rem;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: 
-    typing 1.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 30% }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    29% { border-color: orange; }
 }
 .wave span:nth-child(1), .wave span:nth-child(5), .wave span:nth-child(9), .wave span:nth-child(13){
     border-color: #F8F2FF;
