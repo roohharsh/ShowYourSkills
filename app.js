@@ -517,6 +517,11 @@ app.get("/about", function(req,res){
     res.render("about");
 })
 
+// Login 
+app.get("/login", function(req,res){
+    res.render("login");
+})
+
 // feedback
 const feedbackSchema = {
     firstName: String,

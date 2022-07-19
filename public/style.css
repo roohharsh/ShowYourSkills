@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 *{
     margin: 0px;
     padding: 0;
-    /* font-family: 'Cormorant SC', serif; */
-    /* font-family: 'Bree Serif', serif; */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 HTML{
@@ -18,6 +15,7 @@ body iframe{
     display: flex;
     flex-direction: row;
     /* border: 2px solid black; */
+    
 }
 
 .left{
@@ -93,7 +91,7 @@ body iframe{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.5rem;
+    padding: 0.1rem 0.5rem;
     font-size: 3rem;
     background-color: #145a92;
     box-shadow: 0px 2px 4px 0;
@@ -101,7 +99,27 @@ body iframe{
     margin-left: 3px;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    justify-content: space-between;
 }
+.right .homeHeader img{
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.3rem;
+    border-radius: 50%;
+}
+.login{
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: 2px solid #95d2efde;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.login a{
+    color:white;
+    text-decoration: none;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -109,6 +127,8 @@ body iframe{
     margin-top: 0.5rem;
     max-height: 38rem;
     overflow-y: auto;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    
 }
 .content::-webkit-scrollbar{
     display: none;
@@ -116,6 +136,9 @@ body iframe{
 .content h2{
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+}
+.content h3{
+    font-size: 2rem;
 }
 .content p{
     font-size: 1.2rem;
@@ -195,6 +218,7 @@ body iframe{
 }
 ._btn{
     margin-top: 1rem;
+    cursor: pointer;
 }
 .btn{
     text-decoration: none;
@@ -273,6 +297,7 @@ body iframe{
     color: white;
     font-size: 1.3rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 .button-inner{
     position: relative;
@@ -402,15 +427,15 @@ body iframe{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 100%;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .__working{
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     text-transform: uppercase;
     background-image: linear-gradient(
         -225deg,
@@ -433,6 +458,20 @@ body iframe{
     to{
         background-position: 200% center;
     }
+}
+.back{
+    width: 7%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-top: 6rem;
+    background-color: #42a5f5;
+}
+.back a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 
