@@ -24,7 +24,7 @@ const arturoSchema = {
 };
 const arturo = mongoose.model("arturos",arturoSchema);
 const arturoItem1= new arturo({
-    name:"Arturo",
+    name:"Gautam Kumawat",
     image:"ss1.jpeg",
     time: ""
 })
@@ -88,29 +88,12 @@ const alfaazSchema= {
 };
 const alfaaz = mongoose.model("alfaaz",alfaazSchema);
 const item1 = new alfaaz({
-    name: "Alfaaz",
-    title: "The Raven",
-    item: `Deep into that darkness peering,
-
-    Long I stood there, wondering, fearing,
-    
-    Doubting, dreaming dreams no mortals
-    
-    Ever dared to dream before;
-    
-    But the silence was unbroken,
-    
-    And the stillness gave no token,
-    
-    And the only word there spoken
-    
-    Was the whispered word, "Lenore!"
-    
-    This I whispered, and an echo
-    
-    Murmured back the word, "Lenore!"
-    
-    Merely this, and nothing more.`,
+    name: "Navneet Singh",
+    title: "Alfaaz",
+    item: `साल बदल जाते हैं, तारीखें याद रह जाती हैं,
+    चेहरे बदल जाते हैं, परछाईं याद रह जाती हैं ।
+    इस मोहब्बत को हर शख़्स समझ कर भी न समझ सका,
+    सारी यादें मिट जाती हैं, पर आँखें याद रह जाती हैं ।`,
     time:""
 });
 const defaultAlfaaz = [item1];
@@ -227,7 +210,7 @@ const vibgyorSchema = {
 };
 const vibgyor = mongoose.model("vibgyors",vibgyorSchema);
 const vibgyorItem1= new vibgyor({
-    name:"Vibgyor",
+    name:"Chitrankar",
     image:"ss1.jpeg",
     time: ""
 })
@@ -281,25 +264,262 @@ app.post("/vibgyor/vibgyorUpload" ,upload,function(req,res,next){
     res.redirect("/vibgyor");
 });
 
+// alankar 
+const alankarSchema = {
+    name: String,
+    audio: String,
+    time: String
+};
+const alankar = mongoose.model("alankars",alankarSchema);
+const alankarItem1= new alankar({
+    name:"Vaibhav",
+    audio:"audio.mp3",
+    time: ""
+})
+const defaultAlankar = [alankarItem1];
+app.get("/alankar",function(req,res){
+    alankar.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
+        if(foundItems.length===0)
+        {
+            alankar.insertMany(defaultAlankar,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/alankar");
+        }
+        else
+        res.render("alankar", { posts:foundItems});
+    })
+})
+app.get("/alankar/alankarUpload",function(req,res){
+    res.render("alankarUpload");
+})
+
+let alankarstorage = multer.diskStorage({
+    destination:"./public/alankarUploads/",
+    filename: (req,file,cb)=>{
+        cb(null,Date.now()+file.originalname)
+    }
+});
+var upload = multer({
+    storage:alankarstorage
+}).single('alankarAudio');
+
+app.post("/alankar/alankarUpload" ,upload,function(req,res,next){
+    const name = _.capitalize(req.body.yourName);
+    const audio = req.file.filename;
+    let today = new Date();
+    let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    const item = new alankar({
+        name: name,
+        audio: audio,
+        time: day
+    });
+    item.save();
+    res.redirect("/alankar");
+});
 
 // dcypher 
-app.get("/dcypher", function(req,res){
-    res.render("dcypher");
+const dcypherSchema = {
+    name: String,
+    video: String,
+    time: String
+};
+const dcypher = mongoose.model("dcyphers",dcypherSchema);
+const dcypherItem1= new dcypher({
+    name:"dcypher",
+    video:"video.mp4",
+    time: ""
+})
+const defaultDcypher = [dcypherItem1];
+app.get("/dcypher",function(req,res){
+    dcypher.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
+        if(foundItems.length===0)
+        {
+            dcypher.insertMany(defaultDcypher,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/dcypher");
+        }
+        else
+        res.render("dcypher", { posts:foundItems});
+    })
+})
+app.get("/dcypher/dcypherUpload",function(req,res){
+    res.render("dcypherUpload");
 })
 
-// alankar 
-app.get("/alankar", function(req,res){
-    res.render("alankar");
-})
+let dcypherstorage = multer.diskStorage({
+    destination:"./public/dcypherUploads/",
+    filename: (req,file,cb)=>{
+        cb(null,Date.now()+file.originalname)
+    }
+});
+var upload = multer({
+    storage:dcypherstorage
+}).single('dcypherVideo');
+
+app.post("/dcypher/dcypherUpload" ,upload,function(req,res,next){
+    const name = _.capitalize(req.body.yourName);
+    const video = req.file.filename;
+    let today = new Date();
+    let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    const item = new dcypher({
+        name: name,
+        video: video,
+        time: day
+    });
+    item.save();
+    res.redirect("/dcypher");
+});
 
 // alpha 
-app.get("/alpha", function(req,res){
-    res.render("alpha");
+const alphaSchema = {
+    name: String,
+    video: String,
+    time: String
+};
+const alpha = mongoose.model("alphas",alphaSchema);
+const alphaItem1= new alpha({
+    name:"Alpha Productions",
+    video:"video.mp4",
+    time: ""
 })
+const defaultAlpha = [alphaItem1];
+app.get("/alpha",function(req,res){
+    alpha.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
+        if(foundItems.length===0)
+        {
+            alpha.insertMany(defaultAlpha,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/alpha");
+        }
+        else
+        res.render("alpha", { posts:foundItems});
+    })
+})
+app.get("/alpha/alphaUpload",function(req,res){
+    res.render("alphaUpload");
+})
+
+let alphastorage = multer.diskStorage({
+    destination:"./public/alphaUploads/",
+    filename: (req,file,cb)=>{
+        cb(null,Date.now()+file.originalname)
+    }
+});
+var upload = multer({
+    storage:alphastorage
+}).single('alphaVideo');
+
+app.post("/alpha/alphaUpload" ,upload,function(req,res,next){
+    const name = _.capitalize(req.body.yourName);
+    const video = req.file.filename;
+    let today = new Date();
+    let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    const item = new alpha({
+        name: name,
+        video: video,
+        time: day
+    });
+    item.save();
+    res.redirect("/alpha");
+});
+
+// gaming 
+const gamingSchema = {
+    name: String,
+    video: String,
+    time: String
+};
+const gaming = mongoose.model("gamings",gamingSchema);
+const gamingItem1= new gaming({
+    name:"Gaming",
+    video:"video.mp4",
+    time: ""
+})
+const defaultGaming = [gamingItem1];
+app.get("/gaming",function(req,res){
+    gaming.find({}, function(err,foundItems){
+        foundItems = foundItems.reverse();
+        if(foundItems.length===0)
+        {
+            gaming.insertMany(defaultGaming,function(err){
+                if(err)
+                {
+                    console.log("some error");
+                }
+                else
+                {
+                    console.log("Successfully saved");
+                }
+            })
+            res.redirect("/gaming");
+        }
+        else
+        res.render("gaming", { posts:foundItems});
+    })
+})
+app.get("/gaming/gamingUpload",function(req,res){
+    res.render("gamingUpload");
+})
+
+let gamingstorage = multer.diskStorage({
+    destination:"./public/gamingUploads/",
+    filename: (req,file,cb)=>{
+        cb(null,Date.now()+file.originalname)
+    }
+});
+var upload = multer({
+    storage:gamingstorage
+}).single('gamingVideo');
+
+app.post("/gaming/gamingUpload" ,upload,function(req,res,next){
+    const name = _.capitalize(req.body.yourName);
+    const video = req.file.filename;
+    let today = new Date();
+    let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    const item = new gaming({
+        name: name,
+        video: video,
+        time: day
+    });
+    item.save();
+    res.redirect("/gaming");
+});
 
 // about 
 app.get("/about", function(req,res){
     res.render("about");
+})
+
+// Login 
+app.get("/login", function(req,res){
+    res.render("login");
 })
 
 // feedback

@@ -1,14 +1,39 @@
 <%-include("header")-%>
-<div class="right">
-    <h1 class="homeHeader">Alankar Club Welcomes You</h1>
-<div class="_body">
-    <div class="__working">We are Working on it.</div>
-    <div class="wave">
-        <span></span><span></span><span></span><span></span>
-        <span class="s5"></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
+    <div class="right">
+        <h1 class="homeHeader">
+            <img src="/logo/alankar.png" alt="">
+            Alankar Club Welcomes You
+            <div class="login" >
+                <a href="/login">Login/Register</a> 
+            </div>
+        </h1>
+        <div class="content">
+            <h3>About Alankar Club</h3>
+            <p>
+                Do music notes tune you?
+                Let the beat surround everyone's ears and join the coolest club of college culture.
+                Introducing the Alankar Music Club of IIT Ropar which is the platform where you can showcase your talent
+                with your peers and build your network.
+                Just click on the button below and submit your entries so that one can see the talent inside you-
+            </p>
+            <%posts.forEach(function(post){%>
+                <div class="post">
+                    <div class="heading">
+                        <div class="_name"><%=post.name%></div>
+                        <div class="_time">#<%=post.time%></div>
+                    </div>
+                    <div class="video">
+                        <video width="99%" id="cspd_video" controls autoplay muted>
+                            <source src="/alankarUploads/<%=post.audio%>" type="audio/mp3">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+        <div class="_btn">
+            <a href="/alankar/alankarUpload" class="btn">Upload Your Content <i
+                    class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
     </div>
-</div>
-</div>
-<%-include("footer")-%>
+    <%-include("footer")-%>

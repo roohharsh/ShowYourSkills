@@ -1,29 +1,44 @@
 <%-include("header")-%>
-    <div class="right "><h1 class="homeHeader">Alfaaz Club Welcomes You</h1>
+    <div class="right">
+        <h1 class="homeHeader">
+            <img src="/logo/alfaaz.png" alt="" style="filter: invert(1);">
+            Alfaaz Club Welcomes You
+            <div class="login">
+                <a href="/login">Login/Register</a>
+            </div>
+        </h1>
         <div class="content">
             <h3>About Alfaaz Club</h3>
             <p>
                 Since it is important how you describe yourself and how good and soothing your expressions are.
-                The Alfaaz Club to express your feelings to the your anonymous one. Write your entries and let your batchmates your talent of writing.
-                
-                Expressions are the key to the network you make and this network will help you ensure that it will work after the graduation from this reputed Institute of National Importance.
-                
-                Enter your entries with the below form and make your network stronger and find your friends with similar interests.
+                The Alfaaz Club to express your feelings to the your anonymous one. Write your entries and let your
+                batchmates your talent of writing.
 
+                Expressions are the key to the network you make and this network will help you ensure that it will work
+                after the graduation from this reputed Institute of National Importance.
 
+                Enter your entries by clicking the button below and make your network stronger and find your friends
+                with
+                similar interests.
             </p>
             <%posts.forEach(function(post){%>
                 <div class="post">
                     <div class="heading">
-                        <h2><%=post.title%></h2>
+                        <h2>
+                            <%=post.title%>
+                        </h2>
                         <span>#<%=post.time%></span>
                     </div>
                     <pre><%=post.item%></pre>
-                    <div class="name">~ <%=post.name%></div>
+                    <div class="name">~ <%=post.name%>
+                    </div>
                 </div>
-            <%})%> 
+                <%})%>
         </div>
-        <div class="___btn"><a href="/alfaaz/alfaazUpload" class="btn">Upload Your Content</a></div>
+        <div class="_btn">
+            <a href="/alfaaz/alfaazUpload" class="btn">Upload Your Content <i
+                    class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
     </div>
 
-<%-include("footer")-%>
+    <%-include("footer")-%>
