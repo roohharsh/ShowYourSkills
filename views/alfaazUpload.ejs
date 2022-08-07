@@ -1,17 +1,24 @@
 <%-include("header")-%>
-    <div class="upload">
-        <h1 class="HEADER">Upload Your Content</h1>
-        <div class="container1"> 
-        <form action="/alfaaz/alfaazUpload" method="post" class="Alfaaz">
+    <div class="upload" id="right">
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars" style=color:darkblue"></i>
+        </div>
+        <h1 class="HEADER ALFAAZ">Submit Your Content</h1>
+
+        <div class="container1">
+            <form action="/alfaaz/alfaazUpload" method="post" class="Alfaaz">
                 <h3>Enter Your Name:</h3>
                 <input type="text" name="yourName" class="input" placeholder="Full Name" required>
                 <h3>Enter Title:</h3>
                 <input type="text" name="title" class="input" placeholder="Title" required>
                 <h3>Type Your Content Below:</h3>
-                <textarea name="item" id="poem" class="input" cols="50" rows="10" placeholder="Express Your Words...."></textarea>
-            <button type="submit" name="myContent" class="button"><span class="button-inner">Upload Content <i class="fa-solid fa-arrow-up-from-bracket"></i></span></button>
-        </form>
+                <textarea name="item" id="poem" class="input" cols="50" rows="10"
+                    placeholder="Express Your Words...."></textarea>
+                <button type="submit" name="myContent" class="button"><div class="button-inner">Upload Content <i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></div></button>
+            </form>
         </div>
     </div>
-        
-<%-include("footer")-%>
+
+    <%-include("footer")-%>

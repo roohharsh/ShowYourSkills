@@ -1,13 +1,19 @@
 <%-include("header")-%>
-    <div class="Feedback">
-        <div class="HEADER feed">Please Provide Your Valuable Feedback</div>
+    <div class="Feedback" id="right">
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars" style=color:darkblue"></i>
+            </div>
+            <div class="feed">
+                Please Provide Your valuable Feedback
+            </div>
         <form action="/feedback" method="post">
-        <input type="text" name="yourFirstName" class="input" placeholder=" First Name" required>
-        <input type="text" name="yourLastName" class="input" placeholder=" Last Name" required>
-        <input type="tel" name="Phone" class="input" pattern = "[0-9]{10}" placeholder=" Phone" required>
-        <input type="email" name="email" class="input" placeholder=" Email" required>
-        <textarea name="item" id="poem" class="input" cols="50" rows="10" placeholder=" Your Feedback"></textarea>
-        <button type="submit" name="myContent" class="button" ><span class="button-inner">Submit Feedback</span></button>
-    </form>
+            <input type="text" name="yourFirstName" class="input" placeholder=" First Name" required>
+            <input type="text" name="yourLastName" class="input" placeholder=" Last Name" required>
+            <input type="tel" name="Phone" class="input" pattern="[0-9]{10}" placeholder=" Phone" required>
+            <input type="email" name="email" class="input" placeholder=" Email" required>
+            <textarea name="item" id="poem" class="input" cols="50" rows="10" placeholder=" Your Feedback"></textarea>
+            <button type="submit" name="myContent" class="button"><div class="button-inner">Submit
+                    Feedback</div></button>
+        </form>
     </div>
-<%-include("footer")-%>
+    <%-include("footer")-%>
