@@ -1,5 +1,6 @@
 
 *{
+    max-height: 100vh;
     margin: 0px;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -86,6 +87,7 @@ body iframe{
 .right{
     width: 77vw;
     /* border: 2px solid yellow;    */
+    overflow: scroll;
 }
 .right .homeHeader{
     display: flex;
@@ -157,6 +159,7 @@ body iframe{
     margin-left: 3.1rem;
     margin-right: 3.1rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 .slides > img{
     scroll-snap-align: start;
@@ -282,8 +285,8 @@ body iframe{
     padding: 2px 12px;
     border: 2px solid black;
 }
-.container1 #poem{
-    height: 7rem;
+#poem{
+    height: 12rem;
     width: 30rem;
 }
 .button{
@@ -353,7 +356,7 @@ body iframe{
 }
 /* arturo, vibgyor & gymnasium section  */
 .post{
-    width: 55%;
+    width: 60%;
     margin: 15px auto;
     border-radius: 1rem;
 }
@@ -389,6 +392,7 @@ body iframe{
     margin: 0.5rem 4rem;
     /* border: 2px solid red; */
 }
+
 .arturoUpload form {
     display: flex;
     flex-direction: column;
@@ -397,6 +401,7 @@ body iframe{
     margin: 0.5rem 0.6rem;
     margin-top: 2rem;
     margin-bottom: 0;
+    
 }
 #name{
     margin: 0rem 0.5rem;
@@ -419,6 +424,7 @@ body iframe{
 .arturoUpload h1{
     margin-top: 1rem;
     width: 35rem;
+    
 }
 
 
@@ -460,7 +466,7 @@ body iframe{
     }
 }
 .back{
-    width: 7%;
+    width: 6rem;
     font-size: 1.5rem;
     text-align: center;
     margin: 0 auto;
@@ -483,10 +489,19 @@ body iframe{
 }
 .feed{
     margin-bottom: 1rem;
+    /* margin-left: 2rem; */
+    margin: auto;
+    font-size: 3.5rem;
+    background-image: -webkit-linear-gradient(60deg,#145a92 50%,#9fd6f0 50%);
+    border-radius: 0.3rem;
+    padding: 0.5rem 01rem;
+    color: white;
 }
 .Feedback form{
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 0rem;
 }
 .Feedback .input{
     margin-bottom: 1rem;
@@ -511,7 +526,7 @@ body iframe{
 }
 ._about h2{
     text-align: center;
-    width: 30rem;
+    width: auto;
     margin: 0.5rem auto;
     margin-bottom: 2rem;
 }
@@ -520,6 +535,7 @@ body iframe{
 {
     display: flex;
     flex-direction: column;
+    margin: 1rem auto;
 }
 
 .card{

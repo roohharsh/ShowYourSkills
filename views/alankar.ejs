@@ -1,10 +1,14 @@
 <%-include("header")-%>
-    <div class="right">
+    <div class="right" id="right">
         <h1 class="homeHeader">
-            <img src="/logo/alankar.png" alt="">
-            Alankar Club Welcomes You
+            <img src="/logo/alankar.png" alt="">                
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <span>Alankar Club</span>
             <div class="login" >
-                <a href="/login">Login/Register</a> 
+                <a href="/login">Login</a> 
             </div>
         </h1>
         <div class="content">
@@ -20,7 +24,7 @@
                 <div class="post">
                     <div class="heading">
                         <div class="_name"><%=post.name%></div>
-                        <div class="_time">#<%=post.time%></div>
+                        <div class="_time"><%=post.time%></div>
                     </div>
                     <div class="video">
                         <video width="99%" id="cspd_video" controls autoplay muted>

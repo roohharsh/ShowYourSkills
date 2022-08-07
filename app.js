@@ -22,6 +22,7 @@ const arturoSchema = {
     image: String,
     time: String
 };
+
 const arturo = mongoose.model("arturos",arturoSchema);
 const arturoItem1= new arturo({
     name:"Gautam Kumawat",
@@ -128,7 +129,8 @@ app.post("/alfaaz/alfaazUpload",function(req,res){
     let Title = req.body.title;
     let poem = req.body.item;
     let today = new Date();
-     let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    //  let day = today.toLocaleString("en-US" ,{ timeZone: 'Asia/Kolkata' });
+    let day = today.getDate()+"/"+today.getMonth()+"/"+today.getFullYear();
 
     const item = new alfaaz({
         name: name,

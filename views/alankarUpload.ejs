@@ -1,13 +1,19 @@
 <%-include("header")-%>
-<div class="arturoUpload">
-    <h1 class="HEADER">Submit Your Content</h1>
-    <form action="/alankar/alankarUpload" method="post" class="_Arturo" enctype="multipart/form-data">
-        <h3>Enter Your Name:</h3>
-        <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
-        <div class="fileUpload">Upload Your Content(File should be in .mp4 form): </div>
-        <input type="file" name="alankarAudio" id="arturoImage" accept="audio/mp3" required>
-        <button type="submit" name="alankarSubmit" class="button" ><span class="button-inner">Upload Content <i class="fa-solid fa-arrow-up-from-bracket"></i></span></button>
-    </form>
-</div>
-        
-<%-include("footer")-%>
+    <div class="arturoUpload" id="right">
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars" style=color:darkblue"></i>
+        </div>
+        <h1 class="HEADER">Submit Your Content</h1>
+
+        <form action="/alankar/alankarUpload" method="post" class="_Arturo" enctype="multipart/form-data">
+            <h3>Enter Your Name:</h3>
+            <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
+            <div class="fileUpload">Upload Your Content(File should be in .mp4 form): </div>
+            <input type="file" name="alankarAudio" id="arturoImage" accept="audio/mp3" required>
+            <button type="submit" name="alankarSubmit" class="button"><div class="button-inner">Upload Content <i
+                        class="fa-solid fa-arrow-up-from-bracket"></i></div></button>
+        </form>
+    </div>
+
+    <%-include("footer")-%>

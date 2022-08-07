@@ -1,13 +1,19 @@
 <%-include("header")-%>
-    <div class="arturoUpload">
+    <div class="arturoUpload" id="right">
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars" style=color:darkblue"></i>
+        </div>
         <h1 class="HEADER">Submit Your Content</h1>
+
         <form action="/arturo/arturoUpload" method="post" class="_Arturo" enctype="multipart/form-data">
             <h3>Enter Your Name:</h3>
             <div><input type="text" name="yourName" id="name" placeholder="Enter Your full Name" required></div>
-            <div class="fileUpload">Upload Your Content(File should be only in .png form): </div>
-            <input type="file" name="arturoImage" id="arturoImage" accept="image/png"  required>
-            <button type="submit" name="myImage" class="button" ><span class="button-inner">Upload Content <i class="fa-solid fa-arrow-up-from-bracket"></i></span></button>
+            <div class="fileUpload">Upload Your Content: </div>
+            <input type="file" name="arturoImage" id="arturoImage" accept="image/png" required>
+            <button type="submit" name="myImage" class="button"><div class="button-inner">Upload Content <i
+                        class="fa-solid fa-arrow-up-from-bracket"></i></div></button>
         </form>
     </div>
-        
-<%-include("footer")-%>
+
+    <%-include("footer")-%>

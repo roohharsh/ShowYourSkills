@@ -1,0 +1,425 @@
+.bars {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+}
+
+#cross {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 45px;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:1300px) {
+    #left {
+        position: relative;
+        /* border: 2px solid green; */
+        left: -100%;
+        width: 40vw;
+        z-index: 999;
+        max-height: 100vh;
+        background-color: #95d2ef;
+        overflow: scroll;
+    }
+
+    #right .homeHeader {
+        position: sticky;
+        font-size: 2rem;
+        padding: 5px 0;
+        top: 0;
+        padding-left: 3rem;
+    }
+
+    #right {
+        width: 100vw;
+        margin-left: -40vw;
+    }
+
+    #right .HEADER {
+        margin: 0 auto;
+    }
+
+    #right .content .post {
+        width: 75%;
+    }
+
+    #right ._btn {
+        margin-top: 2rem;
+    }
+
+    .homeHeader img {
+        display: none;
+    }
+
+    .homeHeader span {
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        top: 0.2rem;
+        left: 10px;
+    }
+
+    #cross {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .arturoUpload form {
+        margin: 0 auto;
+    }
+
+    .Feedback form {
+        margin: 2rem auto;
+    }
+
+    #right .feed {
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width:800px) {
+    #left {
+        width: 70vw;
+    }
+
+    #right {
+        margin-left: -70vw;
+    }
+
+    #right .homeHeader {
+        font-size: 2rem;
+        padding: 5px 0;
+        padding-left: 3rem;
+    }
+
+    #right .HEADER {
+        font-size: 2.2rem;
+        margin-left: 7rem;
+        text-align: center;
+        width: auto;
+    }
+
+    #right .ALFAAZ {
+        margin: 0 auto;
+    }
+
+    .input {
+        height: 2rem;
+    }
+
+    .arturoUpload form {
+        margin-left: 6.2rem;
+    }
+
+    .arturoUpload .button {
+        margin-left: 0.5rem;
+    }
+
+    /* #right span {
+        font-size: 3rem;
+    } */
+
+    .content {
+        margin: 0.5rem 1.5rem;
+    }
+
+    #right .content .post {
+        width: 90%;
+    }
+
+    .post .heading {
+        flex-direction: row;
+        /* border: 2px solid red; */
+    }
+
+    .content ._name {
+        font-size: 1.5rem;
+        margin-left: 9px;
+        /* border: 2px solid green; */
+    }
+
+    ._time {
+        /* border: 2px solid green; */
+        font-size: 0.9rem;
+    }
+    .post pre {
+        font-size: 1rem;
+    }
+
+    .container1 .input {
+        width: 50%;
+        margin-left: 3rem;
+    }
+
+    .container1 h3 {
+        margin-left: 3rem;
+    }
+
+    .container1 #poem {
+        width: 25rem;
+    }
+
+    ._button-inner {
+        font-size: 1.5rem;
+    }
+
+    .container1 .button {
+        margin-left: 2.9rem;
+    }
+
+    ._about h2 {
+        width: auto;
+        font-size: 3rem;
+        margin-top: -7px;
+    }
+
+    .card {
+        width: 24rem;
+        margin: 0.5rem auto;
+        height: 8rem;
+    }
+
+    .info h1 {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        width: 12rem;
+        margin-left: 2rem;
+    }
+
+    .Feedback #poem {
+        width: 25rem;
+    }
+
+    .button {
+        margin-left: 2rem;
+    }
+
+    .feed {
+        margin-left: 4.2rem;
+        margin-top: -0.5rem;
+        margin-right: 1rem;
+        width: 69%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .slides{
+        margin: 1rem;
+    }
+    .slides img{
+        width: 22rem;
+        height: 23rem;
+    }
+}
+
+@media (max-width:500px) {
+    #left {
+        width: 100vw;
+        font-size: 1.3rem;
+    }
+
+    .left .logo img {
+        width: 65%;
+    }
+    #cross {
+        font-size: 35px;
+    }
+
+    #right {
+        margin-left: -100vw;
+    }
+
+    #right .homeHeader {
+        font-size: 1.3rem;
+    }
+    .iit_rpr{
+        font-size: 1.2rem;
+    }
+
+    #right span {
+        padding-right: 0.4rem;
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+    }
+    #right .content .post {
+        width: 90%;
+    }
+    .post .heading {
+        flex-direction: column;
+        /* border: 2px solid red; */
+    }
+    .post .name {
+        font-size: 1rem;
+    }
+    .content ._name {
+        font-size: 1.2rem;
+        margin-top: 5px;
+        margin-left: 0;
+        overflow-wrap: break-word;
+    }
+    .post ._time {
+        margin-top: 4px;
+        font-size: 0.8rem;
+    }
+    .post pre {
+        font-size: 0.8rem;
+    }
+    .container1 {
+        width: 94%;
+    }
+
+    .container1 .input {
+        width: 70%;
+        height: 1.5rem;
+    }
+
+    .container1 #poem {
+        height: 7rem;
+        width: 70%;
+    }
+
+    #right .homeHeader {
+        height: 2rem;
+    }
+
+    #right .content {
+        margin: 5px 13px;
+    }
+
+    #right .HEADER {
+        font-size: 1.3rem;
+        margin-left: 2.5rem;
+        text-align: center;
+        width: 70%;
+    }
+    #__working{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .homeHeader .login {
+        position: static;
+        right: 0;
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .Feedback .input{
+        width: 70%;
+    }
+    .Feedback form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+        padding-right: 0.7rem;
+    }
+
+    #right .feed {
+        font-size: 1.5rem;
+        margin-left: 3rem;
+        margin-top: -6px;
+        width: 70%;
+    }
+    .button{
+        width: 12rem;
+        padding-right: 0;
+    }
+    .slides{
+        margin: 1rem;
+    }
+    .slides img{
+        width: 17rem;
+    height: 18rem;
+    }
+    .cards{
+        width: 85%;
+    }
+    .card{
+        width: 100%;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .Feedback #poem {
+        width: 70%;
+    }
+
+    #right .ALFAAZ {
+        font-size: 1.2rem;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: -20px;
+        margin-top: -23px;
+    }
+
+    .about {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .feedback {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    ._about #ABOUT{
+        margin: -6px auto;
+        width: 56%;
+    }
+    .info h1{
+        font-size: 1.1rem;
+    }
+    .avatar{
+        width: 4.5rem;
+        margin-right: 0;
+        height: 80%;
+    }
+    .contact-icon i{
+        font-size: 1rem;
+    }
+    .college{
+        font-size: 0.8rem;
+    }
+    .arturoUpload {
+        margin-right: 0;
+    }
+    .arturoUpload form {
+        margin-left:2.5rem;
+    }
+    #name{
+        width: 80%;
+    }
+}

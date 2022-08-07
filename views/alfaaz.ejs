@@ -1,10 +1,13 @@
 <%-include("header")-%>
-    <div class="right">
+    <div class="right" id="right">
         <h1 class="homeHeader">
             <img src="/logo/alfaaz.png" alt="" style="filter: invert(1);">
-            Alfaaz Club Welcomes You
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <span>Alfaaz Club</span>
             <div class="login">
-                <a href="/login">Login/Register</a>
+                <a href="/login">Login</a>
             </div>
         </h1>
         <div class="content">
@@ -24,10 +27,10 @@
             <%posts.forEach(function(post){%>
                 <div class="post">
                     <div class="heading">
-                        <h2>
+                        <h2 class="_name">
                             <%=post.title%>
                         </h2>
-                        <span>#<%=post.time%></span>
+                        <div class="_time"><%=post.time%></div>
                     </div>
                     <pre><%=post.item%></pre>
                     <div class="name">~ <%=post.name%>
