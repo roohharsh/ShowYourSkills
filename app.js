@@ -6,7 +6,7 @@ const app = express();
 const _ = require("lodash");
 const http = require("http");
 const hostname = '0.0.0.0';
-const port = 3000;
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const AlfaazDB = "mongodb+srv://saurabh_8230:project123@cluster0.zbqxu.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(AlfaazDB,{useNewUrlParser:true});
