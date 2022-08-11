@@ -4,6 +4,9 @@ const multer = require('multer');
 const path = require('path');
 const app = express();
 const _ = require("lodash");
+const http = require("http");
+const hostname = '0.0.0.0';
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const AlfaazDB = "mongodb+srv://saurabh_8230:project123@cluster0.zbqxu.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(AlfaazDB,{useNewUrlParser:true});
@@ -554,6 +557,6 @@ app.post("/feedback",function(req,res){
 
 })
 
-app.listen(3000,function(){
-    console.log("Server started on port 3000");
+app.listen(port,hostname,function(){
+    console.log(`Server started at http://${hostname}:${port}`);
 })
