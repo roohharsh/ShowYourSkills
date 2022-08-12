@@ -356,7 +356,8 @@
     }
     .button{
         width: 12rem;
-        padding-right: 0;
+        font-size: 1.2rem;
+        padding-right: 1rem;
     }
     .slides{
         margin: 1rem;
