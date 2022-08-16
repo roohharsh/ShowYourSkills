@@ -483,7 +483,6 @@ body iframe{
 
 /* feedback section  */
 .Feedback{
-    // display: flex;
     flex-direction: column;
     margin: 1rem auto;
 }
